@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-buttons {
+    text-align: right;
+    margin: 1rem;
+}
+
+.header-buttons button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.header-buttons button:hover {
+    background-color: #218838;
+}
+
+main {
+    display: flex;
+    padding: 2rem;
+}
+
+.sidebar {
+    width: 20%;
+    background: #f4f4f4;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+section {
+    flex: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+}
+
+th {
+    background: #333;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+
+#feedback-form {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f4f4f4;
+    text-align: left;
+}
+
+#feedback-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#feedback-form input, #feedback-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+#feedback-form button {
+    width: 100px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#feedback-form button:hover {
+    background-color: #0056b3;
+}
