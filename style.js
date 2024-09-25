@@ -1,47 +1,161 @@
-// Sample district data
-const districtData = {
-    "State A": [
-        { district: "District 1", damage: "$500,000", deaths: 10, injured: 20, trapped: 5 },
-        { district: "District 2", damage: "$1,000,000", deaths: 15, injured: 25, trapped: 10 }
-    ],
-    "State B": [
-        { district: "District 3", damage: "$800,000", deaths: 8, injured: 12, trapped: 3 },
-        { district: "District 4", damage: "$600,000", deaths: 5, injured: 7, trapped: 1 }
-    ]
-};
-
-// Function to display district data based on selected state
-function showDistricts() {
-    const stateSelect = document.getElementById('state-select');
-    const districtTable = document.getElementById('district-data');
-    districtTable.innerHTML = "";  // Clear previous data
-
-    const selectedState = stateSelect.value;
-    if (districtData[selectedState]) {
-        districtData[selectedState].forEach(data => {
-            const row = `<tr>
-                            <td>${data.district}</td>
-                            <td>${data.damage}</td>
-                            <td>${data.deaths}</td>
-                            <td>${data.injured}</td>
-                            <td>${data.trapped}</td>
-                        </tr>`;
-            districtTable.innerHTML += row;
-        });
-    } else {
-        districtTable.innerHTML = "<tr><td colspan='5'>No data available</td></tr>";
-    }
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-// Handle feedback form submission
-function submitFeedback(event) {
-    event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const comments = document.getElementById('comments').value;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
 
-    alert(`Thank you for your feedback, ${name}!`);
-    
-    // Clear form fields
-    document.getElementById('feedback').reset();
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 26px;
+}
+
+.header-links {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #88b04b;
+    padding: 10px 0;
+}
+
+.navbar a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Floating Alert Section */
+.alert-section {
+    background-color: #ff9800;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+}
+
+#floating-alert {
+    display: inline-block;
+    font-size: 18px;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.sidebar p {
+    margin-top: 10px;
+}
+
+/* News Section */
+.news {
+    width: 50%;
+    background-color: #e5e5e5;
+    padding: 20px;
+}
+
+#news-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.news-slide {
+    flex: 1;
+    padding: 40px;
+    background-color: #ccc;
+    text-align: center;
+}
+
+/* Resources */
+.resources {
+    width: 25%;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Events Section */
+.events {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.event-box {
+    background-color: #6c757d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Mitigation Section */
+.mitigation {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.mitigation p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
 }
