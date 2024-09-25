@@ -3,97 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Management</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Disaster Management Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Disaster Management</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#mitigation">Mitigation</a></li>
-                <li><a href="#preparedness">Preparedness</a></li>
-                <li><a href="#alert-hub">Alert Hub</a></li>
-                <li><a href="#resources">Resources</a></li>
-                <li><a href="#about-us">About Us</a></li>
-            </ul>
-        </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1>Disaster Management</h1>
+            <div class="header-links">
+                <a href="#">Login/Signup</a>
+                <a href="#">Get Notified!</a>
+                <span>Emergency No. - 108!</span>
+            </div>
+        </div>
     </header>
 
-    <!-- Login and Notify Buttons -->
-    <div class="header-buttons">
-        <button id="loginBtn">Login</button>
-        <button id="notifyBtn">Get Notified</button>
-    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#">Home</a>
+            <a href="#">Mitigation</a>
+            <a href="#">Preparedness</a>
+            <a href="#">Alerthub</a>
+            <a href="#">Resources</a>
+            <a href="#">About Us</a>
+        </div>
+    </nav>
 
-    <main>
-        <aside class="sidebar">
-            <h2>Dashboard</h2>
-            <ul>
-                <li><a href="#statistics">Disaster Stats</a></li>
-                <li><a href="#news">Latest News</a></li>
-            </ul>
-        </aside>
-
-        <section id="news">
-            <h2>Latest News</h2>
-            <div class="news-item">
-                <p>News Item 1</p>
-            </div>
-            <div class="news-item">
-                <p>News Item 2</p>
-            </div>
-            <div class="news-item">
-                <p>News Item 3</p>
-            </div>
-        </section>
-
-        <section id="statistics">
-            <h2>Disaster Statistics</h2>
-            <label for="state-select">Select State:</label>
-            <select id="state-select" onchange="showDistricts()">
-                <option value="">Choose State</option>
-                <option value="State A">State A</option>
-                <option value="State B">State B</option>
-            </select>
-
-            <table id="district-table">
-                <thead>
-                    <tr>
-                        <th>District</th>
-                        <th>Damage</th>
-                        <th>Deaths</th>
-                        <th>Injured</th>
-                        <th>Trapped</th>
-                    </tr>
-                </thead>
-                <tbody id="district-data">
-                    <!-- Dynamic Content will be loaded here -->
-                </tbody>
-            </table>
-        </section>
-    </main>
-
-    <!-- Feedback Form -->
-    <section id="feedback-form">
-        <h2>Feedback</h2>
-        <form id="feedback" onsubmit="submitFeedback(event)">
-            <label for="name">Name:</label>
-            <input type="text" id="name" required><br><br>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" required><br><br>
-
-            <label for="comments">Comments:</label>
-            <textarea id="comments" required></textarea><br><br>
-
-            <button type="submit">Submit</button>
-        </form>
+    <!-- Floating Alert Section -->
+    <section class="alert-section">
+        <div class="container">
+            <span id="floating-alert"><i class="fas fa-bell"></i> Floating Alert: Stay safe during floods and earthquakes.</span>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Disaster Management Organization. All rights reserved.</p>
+    <!-- Main Content -->
+    <main class="container main-content">
+        <!-- Sidebar (Dashboard and AlertHub) -->
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <h2>Alerthub</h2>
+            <p>Recent events</p>
+        </aside>
+
+        <!-- Floating News Section -->
+        <section class="news">
+            <div id="news-slider">
+                <div class="news-slide">News 1</div>
+                <div class="news-slide">News 2</div>
+                <div class="news-slide">News 3</div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <aside class="resources">
+            <h2>Resources</h2>
+        </aside>
+    </main>
+
+    <!-- Events Section -->
+    <section class="events container">
+        <div class="event-box">STATES</div>
+        <div class="event-box">CITIES</div>
+        <div class="event-box">DISTRICTS</div>
+        <div class="event-box">DEATH</div>
+        <div class="event-box">INJURED/TRAPPED</div>
+        <div class="event-box">LOSS</div>
+    </section>
+
+    <!-- Mitigation and Precautions Section -->
+    <section class="mitigation container">
+        <p>Mitigation: How to prevent disasters and fight against them</p>
+        <p>Precautions</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>Feedback Form</div>
+            <div>About Us</div>
+            <div>All Rights Reserved</div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
