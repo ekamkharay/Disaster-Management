@@ -11,7 +11,7 @@
         body {
             font-family: Arial, sans-serif;
         }
-        .hover:bg-gray-200:hover {
+        .hover\:bg-gray-200:hover {
             background-color: #E5E7EB; /* Tailwind gray-200 */
         }
     </style>
@@ -44,33 +44,75 @@
         </div>
     </section>
 
-    <!-- Floating News Section with Images -->
-    <section class="bg-gray-50 py-10">
-        <div class="container mx-auto grid grid-cols-3 gap-8">
-            <!-- Recent Events -->
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition hover:bg-gray-200">
-                <h2 class="font-bold text-xl mb-4 text-gray-800">Recent Events</h2>
-                <ul id="recentEventsList" class="space-y-2 text-gray-700">
-                    <!-- Dynamic items here -->
-                </ul>
-            </div>
+               <!-- Main Content Section -->
+    <section class="py-10 bg-gray-200">
+        <div class="container mx-auto">
 
             <!-- Floating Image Section -->
-            <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition hover:bg-gray-200">
+            <div class="relative bg-white p-6 rounded-lg shadow hover:shadow-lg transition hover:bg-gray-200 mb-10">
                 <h2 class="font-bold text-xl mb-4 text-gray-800">Disaster News</h2>
                 <div class="relative overflow-hidden h-64 w-full rounded-lg shadow-md">
-                    <img src="disaster-news.jpg" alt="Disaster News Image" class="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1596811263076-5cf5b60c55e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg4MzN8MHwxfGFsbHwxfHx8fHx8fHwxNjE5MTM0NzI2&ixlib=rb-1.2.1&q=80&w=1080"
+                        alt="Disaster News Image" class="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
                 </div>
                 <p class="mt-4 text-gray-700">Latest disaster news and updates.</p>
             </div>
 
-            <!-- Resources -->
-            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition hover:bg-gray-200">
+            <!-- Recent Events Section -->
+            <h2 class="text-2xl font-bold mb-6 text-center">Recent Events</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-300">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b font-semibold text-left">Event</th>
+                            <th class="py-2 px-4 border-b font-semibold text-left">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-100">
+                            <td class="py-2 px-4 border-b">Community Awareness Workshop</td>
+                            <td class="py-2 px-4 border-b">October 10, 2024</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100">
+                            <td class="py-2 px-4 border-b">Flood Relief Fundraiser</td>
+                            <td class="py-2 px-4 border-b">October 15, 2024</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100">
+                            <td class="py-2 px-4 border-b">First Aid Training Session</td>
+                            <td class="py-2 px-4 border-b">October 20, 2024</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100">
+                            <td class="py-2 px-4 border-b">Disaster Simulation Drill</td>
+                            <td class="py-2 px-4 border-b">October 25, 2024</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100">
+                            <td class="py-2 px-4 border-b">Volunteers Appreciation Day</td>
+                            <td class="py-2 px-4 border-b">October 30, 2024</td>
+                        </tr>
+                        <tr class="hover:bg-gray-100">
+                            <td class="py-2 px-4 border-b">National Disaster Awareness Day</td>
+                            <td class="py-2 px-4 border-b">November 5, 2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Resources Section -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition hover:bg-gray-200 mt-10">
                 <h2 class="font-bold text-xl mb-4 text-gray-800">Resources</h2>
                 <p class="text-gray-700">Downloadable guides, contacts, and help centers for disaster management.</p>
+                <ul class="mt-2">
+                    <li>Emergency Contact List</li>
+                    <li>First Aid Guidelines</li>
+                    <li>Evacuation Plans</li>
+                    <li>Community Support Contacts</li>
+                </ul>
             </div>
         </div>
     </section>
+
+
+
 
     <!-- Disaster Events Table Section -->
     <section class="bg-gray-50 py-10">
@@ -143,33 +185,64 @@
             <p class="text-gray-700 mb-6">India has a long history of natural and man-made disasters that have caused significant loss of life, property, and environmental damage. Here are a few notable ones:</p>
             
             <ul class="text-gray-700 list-disc list-inside text-left mx-auto max-w-3xl">
-
-
                 <li class="mb-2"><span class="font-bold">2004 Indian Ocean Tsunami:</span> One of the deadliest tsunamis in recorded history, claimed more than 230,000 lives across multiple countries.</li>
-                <li class="mb-2"><span class="font-bold">1999 Odisha Super Cyclone:</span> Caused approximately 10,000 deaths and highlighted the need for better cyclone preparedness.</li>
-                <li class="mb-2"><span class="font-bold">2001 Gujarat Earthquake:</span> Magnitude 7.7 earthquake that led to 20,000 deaths and significant destruction.</li>
-                <li class="mb-2"><span class="font-bold">Floods in Kashmir (2014):</span> Resulted in over 500 deaths and widespread displacement.</li>
-                <li class="mb-2"><span class="font-bold">Uttarakhand Floods (2013):</span> Caused massive loss of life and infrastructure damage in the region.</li>
+                <li class="mb-2"><span class="font-bold">1999 Odisha Super Cyclone:</span> Caused approximately 10,000 deaths and widespread destruction in Odisha.</li>
+                <li class="mb-2"><span class="font-bold">2013 Uttarakhand Floods:</span> Resulted in over 5,000 deaths due to floods and landslides in the Himalayan region.</li>
             </ul>
         </div>
     </section>
 
-    <!-- Feedback and Footer Section -->
-    <footer class="bg-gray-800 text-white py-10">
-        <div class="container mx-auto text-center">
-            <h3 class="text-xl font-bold">Feedback Form</h3>
-            <form class="mt-4">
-                <textarea placeholder="Your feedback..." class="w-full p-4 rounded-md bg-gray-700 text-white shadow-md focus:outline-none"></textarea>
-                <button class="bg-green-600 px-6 py-3 mt-4 rounded-lg shadow hover:bg-green-700 transition">Submit</button>
+    <!-- Footer Section with Feedback Form -->
+<footer class="bg-gray-800 text-white py-10">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Feedback Form Section -->
+        <div>
+            <h3 class="text-xl font-bold mb-4">We Value Your Feedback</h3>
+            <form action="#" method="POST" class="space-y-4">
+                <!-- Name Field -->
+                <div>
+                    <label for="name" class="block text-sm font-semibold">Your Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400" placeholder="Enter your name" required>
+                </div>
+
+                <!-- Email Field -->
+                <div>
+                    <label for="email" class="block text-sm font-semibold">Your Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400" placeholder="Enter your email" required>
+                </div>
+
+                <!-- Feedback Field -->
+                <div>
+                    <label for="feedback" class="block text-sm font-semibold">Your Feedback</label>
+                    <textarea id="feedback" name="feedback" rows="4" class="w-full p-2 rounded bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400" placeholder="Write your feedback" required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-500 text-white py-2 rounded font-semibold transition">Submit Feedback</button>
+                </div>
             </form>
-            <div class="mt-6 text-gray-400">
-                <p>History of Indian Disasters | About Us | © All Rights Reserved</p>
-            </div>
         </div>
-    </footer>
+
+        <!-- Footer Info Section -->
+        <div class="text-center md:text-left">
+            <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+            <p class="mb-2">Disaster Management Dashboard</p>
+            <p class="mb-2">Email: info@disastermanagement.com</p>
+            <p class="mb-2">Phone: +1 (555) 123-4567</p>
+            <p class="mt-6 text-sm">© 2024 Disaster Management Dashboard. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
 
 </body>
 </html>
+
+
+
+
+
 
 
 
