@@ -1,0 +1,82 @@
+
+// Use the database (create it if it doesn't exist)
+use('DisasterManagementDB');
+
+// Create Areas Collection and Insert Sample Data for Current Areas in 2023
+db.getCollection('areas').insertMany([
+    {
+        "area": "Himachal Pradesh",
+        "riskFactors": ["Flood", "Landslide"],
+        "lastDisaster": {
+            "type": "Landslide",
+            "date": new Date("2023-08-15T00:00:00Z"),
+            "damage": "4 million USD"
+        }
+    },
+    {
+        "area": "Maharashtra",
+        "riskFactors": ["Flood", "Cyclone"],
+        "lastDisaster": {
+            "type": "Flood",
+            "date": new Date("2023-09-10T00:00:00Z"),
+            "damage": "2 million USD"
+        }
+    },
+    {
+        "area": "Gujarat",
+        "riskFactors": ["Earthquake", "Flood"],
+        "lastDisaster": {
+            "type": "Earthquake",
+            "date": new Date("2023-05-25T00:00:00Z"),
+            "damage": "6 million USD"
+        }
+    },
+    {
+        "area": "Odisha",
+        "riskFactors": ["Cyclone", "Flood"],
+        "lastDisaster": {
+            "type": "Cyclone",
+            "date": new Date("2023-10-01T00:00:00Z"),
+            "damage": "3 million USD"
+        }
+    },
+    {
+        "area": "Uttarakhand",
+        "riskFactors": ["Flood", "Avalanche"],
+        "lastDisaster": {
+            "type": "Flood",
+            "date": new Date("2023-07-20T00:00:00Z"),
+            "damage": "5 million USD"
+        }
+    },
+    {
+        "area": "West Bengal",
+        "riskFactors": ["Flood", "Storm"],
+        "lastDisaster": {
+            "type": "Storm",
+            "date": new Date("2023-06-15T00:00:00Z"),
+            "damage": "4 million USD"
+        }
+    },
+    {
+        "area": "Rajasthan",
+        "riskFactors": ["Drought", "Flood"],
+        "lastDisaster": {
+            "type": "Drought",
+            "date": new Date("2023-08-30T00:00:00Z"),
+            "damage": "1 million USD"
+        }
+    }
+]);
+
+// Log success message
+print("Current areas and disaster management data for 2023 inserted successfully!");
+
+// Retrieve and display areas with disaster records
+const areasWithDisasters = db.getCollection('areas').find({}, { area: 1, "lastDisaster.type": 1, "lastDisaster.date": 1 }).toArray();
+
+// Print the areas where disasters occurred
+print("Areas with recent disasters:");
+areasWithDisasters.forEach(area => {
+    print(`Area: ${area.area}, Disaster Type: ${area.lastDisaster.type}, Date: ${area.lastDisaster.date}`);
+});
